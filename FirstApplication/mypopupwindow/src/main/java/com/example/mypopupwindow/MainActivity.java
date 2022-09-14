@@ -19,7 +19,11 @@ public class MainActivity extends AppCompatActivity {
 
         View popupview = getLayoutInflater().inflate(R.layout.popup_view, null);
 
+        View viewById = popupview.findViewById(R.id.button1);
+        View viewById1 = popupview.findViewById(R.id.button2);
         PopupWindow popupWindow = new PopupWindow(popupview, ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
+        popupWindow.setBackgroundDrawable(getResources().getDrawable(com.google.android.material.R.drawable.abc_ic_star_black_16dp));
+        popupWindow.showAsDropDown(view,view.getWidth(),-view.getHeight());
     }
 }
